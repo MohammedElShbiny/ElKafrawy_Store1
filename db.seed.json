@@ -1,0 +1,168 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Pro Gamer Desktop X",
+      "nameAr": "برو جيمر ديسكتوب X",
+      "category": "pc",
+      "price": 1200,
+      "costPrice": 900,
+      "image": "https://picsum.photos/seed/pc1/600/400",
+      "description": "High performance gaming PC with RTX 4070.",
+      "descriptionAr": "جهاز كمبيوتر ألعاب عالي الأداء مع RTX 4070.",
+      "stock": 4,
+      "specifications": [
+        {
+          "label": "CPU",
+          "value": "Intel Core i9-13900K"
+        },
+        {
+          "label": "GPU",
+          "value": "NVIDIA RTX 4070 12GB"
+        },
+        {
+          "label": "RAM",
+          "value": "32GB DDR5"
+        },
+        {
+          "label": "Storage",
+          "value": "1TB NVMe SSD"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "ZenBook Ultrathin",
+      "nameAr": "زين بوك الترا ثين",
+      "category": "laptop",
+      "price": 950,
+      "costPrice": 750,
+      "image": "https://picsum.photos/seed/laptop1/600/400",
+      "description": "Lightweight and powerful laptop for professionals.",
+      "descriptionAr": "لاب توب خفيف الوزن وقوي للمحترفين.",
+      "stock": 2,
+      "specifications": [
+        {
+          "label": "CPU",
+          "value": "AMD Ryzen 7 7840U"
+        },
+        {
+          "label": "RAM",
+          "value": "16GB LPDDR5"
+        },
+        {
+          "label": "Display",
+          "value": "14\" 2.8K OLED"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Mechanical Keyboard RGB",
+      "nameAr": "لوحة مفاتيح ميكانيكية RGB",
+      "category": "accessories",
+      "price": 85,
+      "costPrice": 50,
+      "image": "https://picsum.photos/seed/kb1/600/400",
+      "description": "Ultra-responsive switches with custom lighting.",
+      "descriptionAr": "مفاتيح فائقة الاستجابة مع إضاءة مخصصة.",
+      "stock": 20,
+      "specifications": [
+        {
+          "label": "Switches",
+          "value": "Mechanical Brown"
+        },
+        {
+          "label": "Backlight",
+          "value": "RGB"
+        }
+      ]
+    }
+  ],
+  "promos": [
+    {
+      "id": "p1",
+      "code": "WELCOME10",
+      "discountPercentage": 10,
+      "active": true,
+      "usageLimit": 100,
+      "usedCount": 15
+    },
+    {
+      "id": "p2",
+      "code": "ELKAFRAWY",
+      "discountPercentage": 15,
+      "active": true,
+      "usageLimit": 50,
+      "usedCount": 5
+    }
+  ],
+  "orders": [
+    {
+      "id": "O7AWUG8MG",
+      "items": [
+        {
+          "productId": "2",
+          "productName": "زين بوك الترا ثين",
+          "price": 950,
+          "quantity": 1
+        }
+      ],
+      "userInfo": {
+        "name": "محمد",
+        "phone": "909",
+        "address": "23"
+      },
+      "userId": null,
+      "status": "ACCEPTED",
+      "timestamp": 1772503624588,
+      "subtotal": 950,
+      "discount": 0,
+      "total": 950,
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "O7UYN12NB",
+      "items": [
+        {
+          "productId": "1",
+          "productName": "برو جيمر ديسكتوب X",
+          "price": 1200,
+          "quantity": 1
+        }
+      ],
+      "userInfo": {
+        "name": "محمد",
+        "phone": "01010",
+        "address": "test"
+      },
+      "userId": null,
+      "status": "ACCEPTED",
+      "timestamp": 1772825928277,
+      "subtotal": 1200,
+      "discount": 0,
+      "total": 1200,
+      "paymentMethod": "cod"
+    }
+  ],
+  "users": [
+    {
+      "uid": "local-admin",
+      "email": "admin@elkafrawy",
+      "displayName": "Admin",
+      "isProfileComplete": true
+    }
+  ],
+  "support_sessions": [],
+  "support_messages": [],
+  "admin_login_history": [
+    {
+      "timestamp": 1772825895112,
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "location": "Unknown",
+      "id": "xzqg35ua3"
+    }
+  ],
+  "notifications": [],
+  "reviews": []
+}

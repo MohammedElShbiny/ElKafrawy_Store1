@@ -1,6 +1,7 @@
 import { MongoClient, Db } from 'mongodb';
 import fs from 'fs';
 import path from 'path';
+import seedData from './db.seed.json';
 
 // Use MONGODB_URI from environment
 const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/elkafrawy_db';
@@ -33,11 +34,13 @@ class FileDb {
         if (fs.existsSync(this.filePath)) {
             this.data = JSON.parse(fs.readFileSync(this.filePath, 'utf-8'));
         } else {
-            this.data = {};
+            // Use imported seed data as fallback if file system read fails or file doesn't exist
+            this.data = JSON.parse(JSON.stringify(seedData));
         }
     } catch (e) {
         console.error('Error reading file DB:', e);
-        this.data = {};
+        // Fallback to imported seed data
+        this.data = JSON.parse(JSON.stringify(seedData));
     }
   }
 

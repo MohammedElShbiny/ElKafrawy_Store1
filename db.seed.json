@@ -10,7 +10,7 @@
       "image": "https://picsum.photos/seed/pc1/600/400",
       "description": "High performance gaming PC with RTX 4070.",
       "descriptionAr": "جهاز كمبيوتر ألعاب عالي الأداء مع RTX 4070.",
-      "stock": 4,
+      "stock": 5,
       "specifications": [
         {
           "label": "CPU",
@@ -114,34 +114,11 @@
         "address": "23"
       },
       "userId": null,
-      "status": "ACCEPTED",
+      "status": "PENDING",
       "timestamp": 1772503624588,
       "subtotal": 950,
       "discount": 0,
       "total": 950,
-      "paymentMethod": "cod"
-    },
-    {
-      "id": "O7UYN12NB",
-      "items": [
-        {
-          "productId": "1",
-          "productName": "برو جيمر ديسكتوب X",
-          "price": 1200,
-          "quantity": 1
-        }
-      ],
-      "userInfo": {
-        "name": "محمد",
-        "phone": "01010",
-        "address": "test"
-      },
-      "userId": null,
-      "status": "ACCEPTED",
-      "timestamp": 1772825928277,
-      "subtotal": 1200,
-      "discount": 0,
-      "total": 1200,
       "paymentMethod": "cod"
     }
   ],
@@ -155,14 +132,7 @@
   ],
   "support_sessions": [],
   "support_messages": [],
-  "admin_login_history": [
-    {
-      "timestamp": 1772825895112,
-      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-      "location": "Unknown",
-      "id": "xzqg35ua3"
-    }
-  ],
+  "admin_login_history": [],
   "notifications": [],
   "reviews": []
 }

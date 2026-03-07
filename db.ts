@@ -10,8 +10,18 @@ if (!process.env.MONGODB_URI) {
   console.warn('WARNING: MONGODB_URI is not set. Using default local URI.');
 }
 
-const client = new MongoClient(connectionString);
+let client: MongoClient | null = null;
 let db: any; // Use any to allow both MongoDB Db and FileDb
+
+try {
+  if (connectionString.startsWith('mongodb://') || connectionString.startsWith('mongodb+srv://')) {
+    client = new MongoClient(connectionString);
+  } else {
+    console.warn('Invalid MongoDB URI scheme. Expected mongodb:// or mongodb+srv://. Falling back to FileDb.');
+  }
+} catch (e) {
+  console.error('Error creating MongoClient:', e);
+}
 
 // Mock MongoDB implementation for fallback
 class FileDb {
@@ -122,6 +132,12 @@ export const getDb = () => {
 
 // Initialize the database
 export const initDb = async () => {
+  if (!client) {
+    console.warn('No valid MongoDB client available. Using FileDb.');
+    db = new FileDb();
+    return;
+  }
+
   try {
     console.log('Attempting to connect to MongoDB...');
     await client.connect();
@@ -154,8 +170,8 @@ export const initDb = async () => {
     console.error('Failed to connect to MongoDB.');
     console.error('Error details:', err.message);
     
-    // Check for common connection errors
-    if (err.code === 'ECONNREFUSED' || err.name === 'MongoServerSelectionError') {
+    // Check for common connection errors or if client is invalid
+    if (err.code === 'ECONNREFUSED' || err.name === 'MongoServerSelectionError' || err.name === 'MongoParseError') {
         console.warn('---------------------------------------------------------');
         console.warn('WARNING: MongoDB is not running or not accessible.');
         console.warn('Falling back to local file-based database (db.seed.json).');
